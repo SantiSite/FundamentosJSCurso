@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Async</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            console.log('1');
+            setTimeout(() => (console.log('2')), 2000);
+            for (let i = 0; i < 10000; i++) {}
+            setTimeout(() => (console.log('3')), 2000);
+            console.log('4')
+        </script>
+    </body>
+</html>
