@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Tiestructura-de-datos-inmutabletle</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      this.height = 1.74;
+      const santi = {
+        name: 'Santiago',
+        lastname: 'Restrepo',
+        height: this.height,
+        age: 22,
+      }
+
+      // Estamos mutando la propiedad ege del objeto santi.
+      const birthday = (people) => people.age++;
+
+
+      // Una buena practica es crear un nuevo objeto (en este caso) para cambiar los valores. Esto hace que el objeto santi sea inmutable
+      const birthdayNew = (people) => ({
+          ...people,
+          age: people.age + 1,
+      })
+
+      // greeting = greeting.bind(santi);
+
+      function greeting(salute = 'Hola', bye = 'Good bye') {
+          console.log(`${salute}, ${santi.name}. What's your lastname? My lastname is ${this.lastname} and my height is ${this.height}m. ${bye}.`);
+      }
+
+      // setTimeout(greeting.bind(santi, 'Oe parce', 'See you later'), 1000);
+
+      // greeting.call(santi, 'Che', 'Good luck');
+
+      greeting.apply(santi, ['Che', 'Good luck']);
+
+    </script>
+  </body>
+</html>

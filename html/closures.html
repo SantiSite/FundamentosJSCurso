@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Closures</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function createGreeting(sentenceFinish){
+        return function (name) {
+          console.log(`Hi, ${name} ${sentenceFinish}`);
+        }
+      }
+
+      const Colombiano = createGreeting('parce');
+      const Argentino = createGreeting('che');
+      const Mexicano = createGreeting('guey');
+
+      Colombiano('Santiago');
+      Argentino('Sacha');
+      Mexicano('Carlos');
+    </script>
+  </body>
+</html>

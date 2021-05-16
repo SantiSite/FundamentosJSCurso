@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Funciones Recursivas</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function divisionEntera(dividendo, divisor) {
+        if (dividendo < divisor) {
+          return 0;
+        }
+        return 1 + divisionEntera(dividendo - divisor, divisor);
+      }
+    </script>
+  </body>
+</html>

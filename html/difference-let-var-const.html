@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Difference Between let, const and var</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var sacha = {
+                name: 'Sacha',
+                lastname: 'Lifszyc',
+                age: 28,
+            };
+
+            function isTheAdult(people) {
+                let message;
+                if (people.age >= 18) {
+                    message = 'He is of ege';
+                } else {
+                    message = 'He is a minor'
+                }
+                console.log(message);
+            }
+
+            isTheAdult(sacha);
+
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            console.log(`Termino el loop, el valor de i es ${i}`);
+
+            // Siempre utilizar let y const. Nunca utilizar var.
+        </script>
+    </body>
+</html>
